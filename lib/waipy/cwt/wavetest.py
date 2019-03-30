@@ -450,7 +450,7 @@ def levels(result, dtmin):
     return lev
 
 
-def wavelet_plot(var, time, data, dtmin, result):
+def wavelet_plot(var, time, data, dtmin, result, return_plot=False):
     """
     PLOT WAVELET TRANSFORM
     var = title name from data
@@ -549,4 +549,6 @@ def wavelet_plot(var, time, data, dtmin, result):
     ax5.set_title('Global Wavelet Spectrum', fontsize=12)
     # save fig
     plt.savefig('%s.png' % var, dpi=300)
+    if return_plot == True:
+        return plt
 
